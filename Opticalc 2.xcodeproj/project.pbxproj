@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D407D23C219697970062403F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D407D23B219697970062403F /* Assets.xcassets */; };
+		D407D243219697970062403F /* Opticalc Watch 2 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D407D242219697970062403F /* Opticalc Watch 2 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D407D24A219697970062403F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D249219697970062403F /* ExtensionDelegate.swift */; };
+		D407D24C219697970062403F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D24B219697970062403F /* NotificationController.swift */; };
+		D407D24E219697980062403F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D407D24D219697980062403F /* Assets.xcassets */; };
+		D407D253219697980062403F /* Opticalc Watch 2.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D407D236219697950062403F /* Opticalc Watch 2.app */; };
+		D407D25D219698560062403F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D407D25C219698560062403F /* Interface.storyboard */; };
+		D407D2642196987C0062403F /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D25E2196987B0062403F /* SettingsInterfaceController.swift */; };
+		D407D2652196987C0062403F /* SpecRxEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D25F2196987C0062403F /* SpecRxEntry.swift */; };
+		D407D2662196987C0062403F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D2602196987C0062403F /* InterfaceController.swift */; };
+		D407D2682196987C0062403F /* ResultsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D2622196987C0062403F /* ResultsInterfaceController.swift */; };
+		D407D26A219699030062403F /* LensPrescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494DC04218FAE4A005F3A84 /* LensPrescription.swift */; };
+		D407D26C2196A9680062403F /* OpticalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D26B2196A9680062403F /* OpticalCalculator.swift */; };
+		D407D26D2196F06C0062403F /* OpticalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407D26B2196A9680062403F /* OpticalCalculator.swift */; };
+		D493D237229E269B00D5265C /* Information.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D493D236229E269B00D5265C /* Information.rtf */; };
+		D494DBF1218F1875005F3A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494DBF0218F1875005F3A84 /* AppDelegate.swift */; };
+		D494DBF3218F1875005F3A84 /* PtRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494DBF2218F1875005F3A84 /* PtRxViewController.swift */; };
+		D494DBF8218F1875005F3A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D494DBF6218F1875005F3A84 /* Main.storyboard */; };
+		D494DBFA218F1877005F3A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494DBF9218F1877005F3A84 /* Assets.xcassets */; };
+		D494DBFD218F1877005F3A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D494DBFB218F1877005F3A84 /* LaunchScreen.storyboard */; };
+		D494DC05218FAE4A005F3A84 /* LensPrescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494DC04218FAE4A005F3A84 /* LensPrescription.swift */; };
+		D494DC08219054C0005F3A84 /* LensPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494DC06219054C0005F3A84 /* LensPrescriptionViewController.swift */; };
+		D494DC09219054C0005F3A84 /* LensPrescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D494DC07219054C0005F3A84 /* LensPrescriptionViewController.xib */; };
+		D4DF95062192501F007A3CF9 /* RxEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DF95052192501F007A3CF9 /* RxEntryStoryboard.storyboard */; };
+		D4DF95082192516B007A3CF9 /* RxEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF95072192516B007A3CF9 /* RxEntryViewController.swift */; };
+		D4DF950A2192B617007A3CF9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF95092192B617007A3CF9 /* Settings.swift */; };
+		D4DF950C2192E331007A3CF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF950B2192E331007A3CF9 /* SettingsViewController.swift */; };
+		D4F3FD2F2191B55E00217ECF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F3FD2E2191B55E00217ECF /* Media.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D407D244219697970062403F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D494DBE5218F1875005F3A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D407D241219697970062403F;
+			remoteInfo = "Opticalc Watch 2 Extension";
+		};
+		D407D251219697980062403F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D494DBE5218F1875005F3A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D407D235219697950062403F;
+			remoteInfo = "Opticalc Watch 2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D407D259219697980062403F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D407D243219697970062403F /* Opticalc Watch 2 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D407D25B219697980062403F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D407D253219697980062403F /* Opticalc Watch 2.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D407D236219697950062403F /* Opticalc Watch 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Opticalc Watch 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D407D23B219697970062403F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D407D23D219697970062403F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D407D242219697970062403F /* Opticalc Watch 2 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Opticalc Watch 2 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D407D249219697970062403F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D407D24B219697970062403F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D407D24D219697980062403F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D407D24F219697980062403F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D407D250219697980062403F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D407D25C219698560062403F /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		D407D25E2196987B0062403F /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
+		D407D25F2196987C0062403F /* SpecRxEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecRxEntry.swift; sourceTree = "<group>"; };
+		D407D2602196987C0062403F /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "../../Opticalc/wkExtension Extension/InterfaceController.swift"; sourceTree = "<group>"; };
+		D407D2622196987C0062403F /* ResultsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsInterfaceController.swift; sourceTree = "<group>"; };
+		D407D26B2196A9680062403F /* OpticalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticalCalculator.swift; sourceTree = "<group>"; };
+		D493D236229E269B00D5265C /* Information.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Information.rtf; sourceTree = "<group>"; };
+		D494DBED218F1875005F3A84 /* Opticalc 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Opticalc 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D494DBF0218F1875005F3A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D494DBF2218F1875005F3A84 /* PtRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtRxViewController.swift; sourceTree = "<group>"; };
+		D494DBF7218F1875005F3A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D494DBF9218F1877005F3A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D494DBFC218F1877005F3A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D494DBFE218F1877005F3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D494DC04218FAE4A005F3A84 /* LensPrescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensPrescription.swift; sourceTree = "<group>"; };
+		D494DC06219054C0005F3A84 /* LensPrescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensPrescriptionViewController.swift; sourceTree = "<group>"; };
+		D494DC07219054C0005F3A84 /* LensPrescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LensPrescriptionViewController.xib; sourceTree = "<group>"; };
+		D4DF95052192501F007A3CF9 /* RxEntryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxEntryStoryboard.storyboard; sourceTree = "<group>"; };
+		D4DF95072192516B007A3CF9 /* RxEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxEntryViewController.swift; sourceTree = "<group>"; };
+		D4DF95092192B617007A3CF9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D4DF950B2192E331007A3CF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4F3FD2E2191B55E00217ECF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D407D23F219697970062403F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D494DBEA218F1875005F3A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D407D237219697950062403F /* Opticalc Watch 2 */ = {
+			isa = PBXGroup;
+			children = (
+				D407D25C219698560062403F /* Interface.storyboard */,
+				D407D23B219697970062403F /* Assets.xcassets */,
+				D407D23D219697970062403F /* Info.plist */,
+			);
+			path = "Opticalc Watch 2";
+			sourceTree = "<group>";
+		};
+		D407D246219697970062403F /* Opticalc Watch 2 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D407D249219697970062403F /* ExtensionDelegate.swift */,
+				D407D24B219697970062403F /* NotificationController.swift */,
+				D407D2602196987C0062403F /* InterfaceController.swift */,
+				D407D2622196987C0062403F /* ResultsInterfaceController.swift */,
+				D407D25E2196987B0062403F /* SettingsInterfaceController.swift */,
+				D407D25F2196987C0062403F /* SpecRxEntry.swift */,
+				D407D24D219697980062403F /* Assets.xcassets */,
+				D407D24F219697980062403F /* Info.plist */,
+				D407D250219697980062403F /* PushNotificationPayload.apns */,
+			);
+			path = "Opticalc Watch 2 Extension";
+			sourceTree = "<group>";
+		};
+		D494DBE4218F1875005F3A84 = {
+			isa = PBXGroup;
+			children = (
+				D494DBEF218F1875005F3A84 /* Opticalc 2 */,
+				D407D237219697950062403F /* Opticalc Watch 2 */,
+				D407D246219697970062403F /* Opticalc Watch 2 Extension */,
+				D494DBEE218F1875005F3A84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D494DBEE218F1875005F3A84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D494DBED218F1875005F3A84 /* Opticalc 2.app */,
+				D407D236219697950062403F /* Opticalc Watch 2.app */,
+				D407D242219697970062403F /* Opticalc Watch 2 Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D494DBEF218F1875005F3A84 /* Opticalc 2 */ = {
+			isa = PBXGroup;
+			children = (
+				D493D236229E269B00D5265C /* Information.rtf */,
+				D494DBF0218F1875005F3A84 /* AppDelegate.swift */,
+				D494DBF2218F1875005F3A84 /* PtRxViewController.swift */,
+				D4DF950B2192E331007A3CF9 /* SettingsViewController.swift */,
+				D494DBF6218F1875005F3A84 /* Main.storyboard */,
+				D494DBF9218F1877005F3A84 /* Assets.xcassets */,
+				D494DBFB218F1877005F3A84 /* LaunchScreen.storyboard */,
+				D494DBFE218F1877005F3A84 /* Info.plist */,
+				D494DC04218FAE4A005F3A84 /* LensPrescription.swift */,
+				D494DC06219054C0005F3A84 /* LensPrescriptionViewController.swift */,
+				D494DC07219054C0005F3A84 /* LensPrescriptionViewController.xib */,
+				D4F3FD2E2191B55E00217ECF /* Media.xcassets */,
+				D4DF95052192501F007A3CF9 /* RxEntryStoryboard.storyboard */,
+				D4DF95072192516B007A3CF9 /* RxEntryViewController.swift */,
+				D4DF95092192B617007A3CF9 /* Settings.swift */,
+				D407D26B2196A9680062403F /* OpticalCalculator.swift */,
+			);
+			path = "Opticalc 2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D407D235219697950062403F /* Opticalc Watch 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D407D25A219697980062403F /* Build configuration list for PBXNativeTarget "Opticalc Watch 2" */;
+			buildPhases = (
+				D407D234219697950062403F /* Resources */,
+				D407D259219697980062403F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D407D245219697970062403F /* PBXTargetDependency */,
+			);
+			name = "Opticalc Watch 2";
+			productName = "Opticalc Watch 2";
+			productReference = D407D236219697950062403F /* Opticalc Watch 2.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D407D241219697970062403F /* Opticalc Watch 2 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D407D258219697980062403F /* Build configuration list for PBXNativeTarget "Opticalc Watch 2 Extension" */;
+			buildPhases = (
+				D407D23E219697970062403F /* Sources */,
+				D407D23F219697970062403F /* Frameworks */,
+				D407D240219697970062403F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Opticalc Watch 2 Extension";
+			productName = "Opticalc Watch 2 Extension";
+			productReference = D407D242219697970062403F /* Opticalc Watch 2 Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		D494DBEC218F1875005F3A84 /* Opticalc 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D494DC01218F1877005F3A84 /* Build configuration list for PBXNativeTarget "Opticalc 2" */;
+			buildPhases = (
+				D494DBE9218F1875005F3A84 /* Sources */,
+				D494DBEA218F1875005F3A84 /* Frameworks */,
+				D494DBEB218F1875005F3A84 /* Resources */,
+				D407D25B219697980062403F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D407D252219697980062403F /* PBXTargetDependency */,
+			);
+			name = "Opticalc 2";
+			productName = "Opticalc 2";
+			productReference = D494DBED218F1875005F3A84 /* Opticalc 2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D494DBE5218F1875005F3A84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Robert McQualter";
+				TargetAttributes = {
+					D407D235219697950062403F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D407D241219697970062403F = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
+					};
+					D494DBEC218F1875005F3A84 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = D494DBE8218F1875005F3A84 /* Build configuration list for PBXProject "Opticalc 2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D494DBE4218F1875005F3A84;
+			productRefGroup = D494DBEE218F1875005F3A84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D494DBEC218F1875005F3A84 /* Opticalc 2 */,
+				D407D235219697950062403F /* Opticalc Watch 2 */,
+				D407D241219697970062403F /* Opticalc Watch 2 Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D407D234219697950062403F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407D23C219697970062403F /* Assets.xcassets in Resources */,
+				D407D25D219698560062403F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D407D240219697970062403F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407D24E219697980062403F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D494DBEB218F1875005F3A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F3FD2F2191B55E00217ECF /* Media.xcassets in Resources */,
+				D494DBFD218F1877005F3A84 /* LaunchScreen.storyboard in Resources */,
+				D494DBFA218F1877005F3A84 /* Assets.xcassets in Resources */,
+				D494DC09219054C0005F3A84 /* LensPrescriptionViewController.xib in Resources */,
+				D4DF95062192501F007A3CF9 /* RxEntryStoryboard.storyboard in Resources */,
+				D494DBF8218F1875005F3A84 /* Main.storyboard in Resources */,
+				D493D237229E269B00D5265C /* Information.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D407D23E219697970062403F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407D26D2196F06C0062403F /* OpticalCalculator.swift in Sources */,
+				D407D26A219699030062403F /* LensPrescription.swift in Sources */,
+				D407D24C219697970062403F /* NotificationController.swift in Sources */,
+				D407D24A219697970062403F /* ExtensionDelegate.swift in Sources */,
+				D407D2642196987C0062403F /* SettingsInterfaceController.swift in Sources */,
+				D407D2682196987C0062403F /* ResultsInterfaceController.swift in Sources */,
+				D407D2662196987C0062403F /* InterfaceController.swift in Sources */,
+				D407D2652196987C0062403F /* SpecRxEntry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D494DBE9218F1875005F3A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407D26C2196A9680062403F /* OpticalCalculator.swift in Sources */,
+				D4DF95082192516B007A3CF9 /* RxEntryViewController.swift in Sources */,
+				D494DC05218FAE4A005F3A84 /* LensPrescription.swift in Sources */,
+				D494DC08219054C0005F3A84 /* LensPrescriptionViewController.swift in Sources */,
+				D4DF950A2192B617007A3CF9 /* Settings.swift in Sources */,
+				D494DBF1218F1875005F3A84 /* AppDelegate.swift in Sources */,
+				D494DBF3218F1875005F3A84 /* PtRxViewController.swift in Sources */,
+				D4DF950C2192E331007A3CF9 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D407D245219697970062403F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D407D241219697970062403F /* Opticalc Watch 2 Extension */;
+			targetProxy = D407D244219697970062403F /* PBXContainerItemProxy */;
+		};
+		D407D252219697980062403F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D407D235219697950062403F /* Opticalc Watch 2 */;
+			targetProxy = D407D251219697980062403F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D494DBF6218F1875005F3A84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D494DBF7218F1875005F3A84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D494DBFB218F1877005F3A84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D494DBFC218F1877005F3A84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D407D254219697980062403F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				IBSC_MODULE = Opticalc_Watch_2_Extension;
+				INFOPLIST_FILE = "Opticalc Watch 2/Info.plist";
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		D407D255219697980062403F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				IBSC_MODULE = Opticalc_Watch_2_Extension;
+				INFOPLIST_FILE = "Opticalc Watch 2/Info.plist";
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		D407D256219697980062403F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				INFOPLIST_FILE = "Opticalc Watch 2 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		D407D257219697980062403F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				INFOPLIST_FILE = "Opticalc Watch 2 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		D494DBFF218F1877005F3A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D494DC00218F1877005F3A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D494DC02218F1877005F3A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				INFOPLIST_FILE = "Opticalc 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D494DC03218F1877005F3A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BAXSJQKNRG;
+				INFOPLIST_FILE = "Opticalc 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ausoptom.Opticalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D407D258219697980062403F /* Build configuration list for PBXNativeTarget "Opticalc Watch 2 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D407D256219697980062403F /* Debug */,
+				D407D257219697980062403F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D407D25A219697980062403F /* Build configuration list for PBXNativeTarget "Opticalc Watch 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D407D254219697980062403F /* Debug */,
+				D407D255219697980062403F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D494DBE8218F1875005F3A84 /* Build configuration list for PBXProject "Opticalc 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D494DBFF218F1877005F3A84 /* Debug */,
+				D494DC00218F1877005F3A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D494DC01218F1877005F3A84 /* Build configuration list for PBXNativeTarget "Opticalc 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D494DC02218F1877005F3A84 /* Debug */,
+				D494DC03218F1877005F3A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D494DBE5218F1875005F3A84 /* Project object */;
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Opticalc-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Opticalc" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Opticalc_Watch_2_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Sao-31-CY6">
+                            <items>
+                                <label width="136" alignment="left" text="Spec Rx" id="ea3-YH-uOe"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="+10.25/-10.50x175" id="DWJ-UR-GjJ">
+                            <color key="titleColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <connections>
+                                <segue destination="VeF-Gz-4Nl" kind="modal" identifier="SpecRx" id="R1Q-od-YKe"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Nominal C/L Pwr" id="nZt-af-iZQ"/>
+                        <button width="1" alignment="left" title="+10.25/-10.50x175" id="M1k-di-TAW">
+                            <color key="titleColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <connections>
+                                <segue destination="VeF-Gz-4Nl" kind="modal" identifier="CLRx" id="kBF-B6-WoJ"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Over-Refraction" id="voC-Jb-1sp"/>
+                        <button width="1" alignment="left" title="+10.25/-10.50x175" id="Nkd-su-i3J">
+                            <color key="titleColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <connections>
+                                <segue destination="VeF-Gz-4Nl" kind="modal" identifier="OverRx" id="VuF-KI-n2p"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="Jb2-D3-VBS"/>
+                        <button width="1" alignment="left" title="Calculate" id="zAW-OI-A3p">
+                            <connections>
+                                <segue destination="cFj-a2-pG2" kind="modal" identifier="Results" id="tnK-1i-zxY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="39Q-5U-ZxQ">
+                        <items>
+                            <menuItem title="Settings" icon="info" id="zFn-cq-2eT">
+                                <connections>
+                                    <action selector="settingsSelected" destination="AgC-eL-Hgc" id="pCg-gs-LHn"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reset" icon="repeat" id="McT-Wz-ibt">
+                                <connections>
+                                    <action selector="resetSelected" destination="AgC-eL-Hgc" id="7U6-5f-c1K"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="calculateButton" destination="zAW-OI-A3p" id="qVb-gI-5IE"/>
+                        <outlet property="clRxButton" destination="M1k-di-TAW" id="HcB-Rp-P3P"/>
+                        <outlet property="overRxButton" destination="Nkd-su-i3J" id="vol-D6-Web"/>
+                        <outlet property="specRxButton" destination="DWJ-UR-GjJ" id="XKl-my-J76"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-76" y="198.5"/>
+        </scene>
+        <!--Done-->
+        <scene sceneID="Y1s-DX-oza">
+            <objects>
+                <controller identifier="SpecRxEntry" title="Done" hidesWhenLoading="NO" id="VeF-Gz-4Nl" customClass="SpecRxEntry" customModule="Opticalc_Watch_2_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Spec Rx" textAlignment="center" id="sfW-wB-Pc0">
+                            <color key="textColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <group width="136" height="75" alignment="left" layout="vertical" id="QbW-rz-tb6">
+                            <items>
+                                <group width="1" alignment="left" id="ucQ-hr-cl7">
+                                    <items>
+                                        <picker width="0.5" widthAdjustment="-1" height="35" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="NOe-uI-0BF">
+                                            <connections>
+                                                <action selector="spherePickerChanged:" destination="VeF-Gz-4Nl" id="nxz-LD-pjd"/>
+                                            </connections>
+                                        </picker>
+                                        <picker width="0.5" widthAdjustment="-1" height="35" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="oje-sg-Dj4">
+                                            <connections>
+                                                <action selector="sphereDecimalPickerChanged:" destination="VeF-Gz-4Nl" id="hNu-J6-rli"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="iiW-TF-7SL">
+                                    <items>
+                                        <picker width="0.5" widthAdjustment="3" height="35" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="adD-A6-ea8">
+                                            <connections>
+                                                <action selector="cylPickerChanged:" destination="VeF-Gz-4Nl" id="zQy-mu-q3S"/>
+                                            </connections>
+                                        </picker>
+                                        <picker width="0.5" widthAdjustment="-3" height="35" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="qZC-aK-INC">
+                                            <connections>
+                                                <action selector="axisPickerChanged:" destination="VeF-Gz-4Nl" id="qUN-9r-4Fv"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <label width="1" height="22" alignment="left" text="+10.00/-10.00x180" textAlignment="center" id="Ef7-XA-k8f">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="axisPicker" destination="qZC-aK-INC" id="0op-h2-N43"/>
+                        <outlet property="cylPicker" destination="adD-A6-ea8" id="76m-7c-99d"/>
+                        <outlet property="rxLabel" destination="Ef7-XA-k8f" id="5bC-N7-Q05"/>
+                        <outlet property="sphereDecimalPicker" destination="oje-sg-Dj4" id="sJl-dS-dtL"/>
+                        <outlet property="spherePicker" destination="NOe-uI-0BF" id="NEc-0J-AYO"/>
+                        <outlet property="titleLabel" destination="sfW-wB-Pc0" id="eWe-Q1-RHQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="176" y="184"/>
+        </scene>
+        <!--settingsInterface-->
+        <scene sceneID="ePC-XL-RWB">
+            <objects>
+                <controller identifier="settingsInterface" hidesWhenLoading="NO" id="sL4-k2-chT" customClass="SettingsInterfaceController" customModule="Opticalc_Watch_2_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="hxU-cb-uk5">
+                            <items>
+                                <label height="1" alignment="left" text="Vertex:" id="24Q-A5-GYi"/>
+                                <picker width="77" height="36" alignment="left" focusStyle="stack" id="9n5-NH-9kX">
+                                    <connections>
+                                        <action selector="vdChanged:" destination="sL4-k2-chT" id="gg4-sI-Md3"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <switch width="1" alignment="left" value="YES" title="Use Oc Rx" id="OR0-Ob-3J5">
+                            <connections>
+                                <action selector="useOcRxChanged:" destination="sL4-k2-chT" id="rMd-wF-dFs"/>
+                            </connections>
+                        </switch>
+                        <separator alignment="left" id="cHi-sF-GBJ"/>
+                        <button width="1" alignment="left" title="Save" id="YRb-2p-8Lt">
+                            <connections>
+                                <action selector="doneButtonSelected" destination="sL4-k2-chT" id="mkO-9i-SmB"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ocRxSwitch" destination="OR0-Ob-3J5" id="hc1-fL-Jz9"/>
+                        <outlet property="vdPicker" destination="9n5-NH-9kX" id="b72-BJ-59F"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-60" y="538.5"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="Fee-ED-T7L">
+            <objects>
+                <controller title="Close" hidesWhenLoading="NO" id="cFj-a2-pG2" customClass="ResultsInterfaceController" customModule="Opticalc_Watch_2_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Lens To Order:" textAlignment="left" id="cJk-Sx-wRI"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="oRc-el-0Hw">
+                            <color key="textColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <separator alignment="left" id="zx2-PX-Ulh"/>
+                        <group width="1" alignment="left" id="3mq-UI-pc2">
+                            <items>
+                                <label alignment="left" text="Rotation:" id="4tH-Ki-pxd"/>
+                                <label alignment="left" text="Label" id="ras-U1-lis">
+                                    <color key="textColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="yVp-tt-9GX"/>
+                        <label width="1" alignment="left" text="Apparent C/L Pwr:" textAlignment="left" id="BhS-eM-6LN"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="hh8-Zc-uda">
+                            <color key="textColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <separator alignment="left" id="FL0-b6-CRd"/>
+                        <label width="1" alignment="left" text="Ocular Rx:" textAlignment="center" id="sBb-9C-9Kg"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="JtS-zs-5zp">
+                            <color key="textColor" red="1" green="0.62319688949999996" blue="0.37246944479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button width="1" alignment="left" hidden="YES" title="Done" id="eyU-Pz-wwC">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="cFj-a2-pG2" id="ymO-Q8-mfS"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="apparentCLRxLabel" destination="hh8-Zc-uda" id="stg-OR-xak"/>
+                        <outlet property="lensToOrderLabel" destination="oRc-el-0Hw" id="sI3-X2-Q2T"/>
+                        <outlet property="ocularRxLabel" destination="JtS-zs-5zp" id="j6R-0v-5b5"/>
+                        <outlet property="rotationLabel" destination="ras-U1-lis" id="AhO-03-9Tu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="157" y="509.5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R1Q-od-YKe"/>
+    </inferredMetricsTieBreakers>
+</document>

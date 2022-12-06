@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1Q2-Zg-iSW">
+            <objects>
+                <navigationController storyboardIdentifier="RxEntry" id="eoY-wW-LYq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zZq-hE-NNv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F4I-lc-ZvQ" kind="relationship" relationship="rootViewController" id="lS2-Cp-Pp5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0o2-Aj-3JE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="776"/>
+        </scene>
+        <!--Rx Entry-->
+        <scene sceneID="cbr-dx-O3G">
+            <objects>
+                <viewController id="F4I-lc-ZvQ" customClass="RxEntryViewController" customModule="Opticalc_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPa-gj-KkL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBR-7r-0IG">
+                                <rect key="frame" x="0.0" y="44" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="0Kr-do-2Ne"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="F4I-lc-ZvQ" id="ove-eR-Ubo"/>
+                                    <outlet property="delegate" destination="F4I-lc-ZvQ" id="Jpa-60-ROw"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsk-z6-NFG">
+                                <rect key="frame" x="0.0" y="262" width="320" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="9Zl-iN-Qz0"/>
+                                    <constraint firstAttribute="height" constant="1" id="KVs-qi-aKo"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="vxY-Jo-rbl">
+                                <rect key="frame" x="19" y="276" width="282" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0we-6g-oe3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="43C-Wp-WZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="eQG-l0-wqU">
+                                <rect key="frame" x="99.5" y="344" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1JD-kQ-DQp"/>
+                                    <constraint firstAttribute="width" constant="121" id="3uV-N7-Wyc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+ cyl"/>
+                                    <segment title="- cyl"/>
+                                </segments>
+                                <connections>
+                                    <action selector="plusMinusCylValueChanged:" destination="F4I-lc-ZvQ" eventType="valueChanged" id="wd8-db-iDy"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P1I-JM-4BM" firstAttribute="trailing" secondItem="vxY-Jo-rbl" secondAttribute="trailing" constant="19" id="Kxx-qE-xkh"/>
+                            <constraint firstItem="Xsk-z6-NFG" firstAttribute="top" secondItem="P1I-JM-4BM" secondAttribute="top" constant="218" id="Ok5-5k-gYk"/>
+                            <constraint firstItem="kBR-7r-0IG" firstAttribute="trailing" secondItem="P1I-JM-4BM" secondAttribute="trailing" id="Ys1-T8-xRY"/>
+                            <constraint firstItem="vxY-Jo-rbl" firstAttribute="leading" secondItem="P1I-JM-4BM" secondAttribute="leading" constant="19" id="Zk7-27-gKn"/>
+                            <constraint firstAttribute="trailing" secondItem="Xsk-z6-NFG" secondAttribute="trailing" id="cg5-ET-EMp"/>
+                            <constraint firstItem="Xsk-z6-NFG" firstAttribute="leading" secondItem="wPa-gj-KkL" secondAttribute="leading" id="ijZ-kC-PRB"/>
+                            <constraint firstItem="vxY-Jo-rbl" firstAttribute="top" secondItem="Xsk-z6-NFG" secondAttribute="bottom" constant="13" id="jVX-Dj-da6"/>
+                            <constraint firstItem="kBR-7r-0IG" firstAttribute="leading" secondItem="P1I-JM-4BM" secondAttribute="leading" id="lOK-n4-slV"/>
+                            <constraint firstItem="kBR-7r-0IG" firstAttribute="top" secondItem="P1I-JM-4BM" secondAttribute="top" id="lX4-Pj-WVY"/>
+                            <constraint firstItem="eQG-l0-wqU" firstAttribute="centerX" secondItem="wPa-gj-KkL" secondAttribute="centerX" id="oKe-WE-UAZ"/>
+                            <constraint firstItem="eQG-l0-wqU" firstAttribute="top" secondItem="vxY-Jo-rbl" secondAttribute="bottom" constant="25" id="xdC-XG-RDj"/>
+                            <constraint firstItem="vxY-Jo-rbl" firstAttribute="top" secondItem="Xsk-z6-NFG" secondAttribute="bottom" constant="13" id="zrg-v3-QjF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P1I-JM-4BM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rx Entry" id="nrZ-4c-Odh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2DI-gJ-IMW">
+                            <connections>
+                                <action selector="cancelTapped:" destination="F4I-lc-ZvQ" id="c4E-xD-ekM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dph-Ub-iPb">
+                            <connections>
+                                <action selector="doneTapped:" destination="F4I-lc-ZvQ" id="5Y7-ca-U2p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="plusMinusCylFormSegControl" destination="eQG-l0-wqU" id="r4K-0Z-fa2"/>
+                        <outlet property="rxLabel" destination="vxY-Jo-rbl" id="G79-py-xAq"/>
+                        <outlet property="rxPicker" destination="kBR-7r-0IG" id="5Lg-ly-QCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdc-xz-Ekk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="773"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
